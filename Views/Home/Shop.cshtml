@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "Shop";
+}
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include bootstrap CSS -->
+    <!-- Include bootstrap CSS -->
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/reset.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/css/responsive.css" rel="stylesheet">
+
+
+    <title>Shop</title>
+
+<body id="about-us">
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-xs-4">
+                    <div class="top-text"><p>  Things AVAILABLE to BUY</p></div>
+                </div>
+            </div>
+        </div><!--/.container-->
+    </div><!--/.top-bar-->
+    <!--Apple Start Imgs-->
+
+    <link rel="stylesheet" href="~/css/style1.css" type="text/css">
+
+
+    <form action="/file-upload" class="dropzone">
+        <div class="fallback">
+            <input name="file" type="file" multiple />
+        </div>
+    </form>
+
+
+    <div class="col-sm-10">
+        <form action="~/Home/Searched" method="post">
+
+            <select class="flow-control" id="Price" name="Price">
+                <option value="1-4000">1-4000</option>
+                <option value="4000-8000">4000-8000</option>
+                <option value="8000-12000">8000-12000</option>
+                <option value="12000-16000">12000-16000</option>
+            </select>
+            <button type="submit" class="btn btn-defualt">Searched</button>
+        </form>
+    </div>
+
+    <div id="body">
+        <h3>IPHONE Available Mobiles List</h3>
+        @*<ul>
+            @*<li>
+                <a href="6plus.html">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="210" height="170" background="~/images/apple/small/6plus.jpg" valign="bottom">
+                                <font size="+1" color="black">&nbsp;&nbsp;Samsung 6 Plus</font>
+                            </td>
+                        </tr>
+                    </table>
+                </a>
+            </li>*@
+            @*<li>
+        <a href="6.html"><img src="~/images/apple/small/6.jpg" alt=""></a>
+    </li>
+
+    <li>
+        <a href="5s.html">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="210" height="170" background="~/images/apple/small/5s.jpg" valign="bottom">
+                        <font size="+1" color="black">&nbsp;&nbsp;Samsung 5S</font>
+                    </td>
+                </tr>
+            </table>
+        </a>
+    </li>
+
+    <li>
+        <a href="5c.html"><img src="~/images/apple/small/5c.jpg" alt=""></a>
+    </li>
+    <li>
+        <a href="4s.html"><img src="~/images/apple/small/4s.jpg" alt=""></a>
+    </li>
+    <li>
+        <a href="4.html"><img src="~/images/apple/small/4.jpg" alt=""></a>
+    </li>
+    <li>
+        <a href="3gs.html"><img src="~/images/apple/small/3gs.jpg" alt=""></a>
+    </li>
+    <li>
+        <a href="3g.html"><img src="~/images/apple/small/3g.jpg" alt=""></a>
+    </li>
+        </ul>*@
+        <a href="#" class="more">show more</a>
+    </div>
+
+    <!---Apple End Imgs->
+    <!-- Main Contents Ends -->
+
+</body>
+<script src="~/js/bootstrap.min.js"></script>

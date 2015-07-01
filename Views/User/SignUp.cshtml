@@ -1,0 +1,173 @@
+﻿@{
+    ViewBag.Title = "SignUp";
+    Layout = null;
+}
+@model MvcApplication8.Models.User
+
+<link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link rel="stylesheet" href="~/css/style.css">
+<link rel="stylesheet" href="~/css/style.css">
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="~/Content/themes/base/jquery-ui.css" />
+<script src="~/Script/jquery-1.8.2.js"></script>
+<script src="~/Script/jquery-ui-1.8.24.js"></script>
+<link rel="stylesheet" href="~/css/style.css">
+
+
+<!-- Header -->
+<header id="header" class="header">
+    <div role="banner" class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <a href="index.html" class="navbar-brand"><img alt="logo" src="~/images/e-logo.png"></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="~/Home/Index">HOME</a></li>
+                    <li><a href="~/Home/About">ABOUT</a></li>
+                    <li><a href="~/Home/Shop">SHOP</a></li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="glyphicon glyphicon-menu-down"></span> LOGIN</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="~/Home/Login"><span class="glyphicon glyphicon-menu-right"></span> Login</a></li>
+                            <li><a href="~/User/SignUp"><span class="glyphicon glyphicon-menu-right"></span> Sign Up</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="~/Home/Contacts">CONTACTS</a></li>
+                    <li><a href="#"><img src="~/images/search.png"></a></li>
+                </ul>
+            </div>
+        </div>
+        <!--/.container-->
+    </div>
+</header>
+<!--Header Ends-->
+
+<h2>welcome to sign up</h2>
+    <div class="col-sm-12" style="background-image:url(/Images/closureImage/backgrond1.jpg)">
+        <div class="col-md-1"></div>
+
+
+        <div class="col-sm-3">
+        </div>
+
+        <div class="col-sm-4">
+
+            <div class="form-group   pull-center">
+                @using (Html.BeginForm("saveClient", "User", FormMethod.Post))
+                {
+                    <div class="editor-label">
+                        @Html.LabelFor(Model => Model.cname)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.TextBoxFor(Model => Model.cname, new { @placeholder = "Enter First Name", @id = "cname", @required = "required", @class = "form-control" })
+
+                        <button type="button" id="uname" class="btn btn-info pull-right">check</button>
+
+                        @Html.ValidationMessageFor(Model => Model.cname)
+                    </div>
+
+
+                    <div class="editor-label">
+                        @Html.LabelFor(Model => Model.Lname)
+                    </div>
+                    <div class="editor-label">
+                        @Html.TextBoxFor(Model => Model.Lname, new { @placeholder = "Enter Last Name ", @class = "form-control" })
+                        @Html.ValidationMessageFor(Model => Model.Lname)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(Model => Model.cemail)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.TextBoxFor(Model => Model.cemail, new { @placeholder = "enter user email ", @id = "cemail", @required = "required", @class = "form-control" })
+                        <button type="button" id="bemail" class="btn btn-info pull-right">check</button>
+                        @Html.ValidationMessageFor(Model => Model.cemail)
+                    </div>
+                    <br />
+                    <br />
+                    <p>Date:<input type="text" id="datepicker" placeholder="select data from data picker "></p>
+
+
+                    <div class="editor-label">
+                        @Html.LabelFor(Model => Model.cpassword)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.TextBoxFor(Model => Model.cpassword, new { @placeholder = "enter user password ", @required = "required", @class = "form-control" })
+                        @Html.ValidationMessageFor(Model => Model.cpassword)
+                    </div>
+
+
+                    <div class="editor-label">
+                        @Html.LabelFor(Model => Model.caddress)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.TextBoxFor(Model => Model.caddress, new { @placeholder = "enter user address ", @class = "form-control" })
+                        @Html.ValidationMessageFor(Model => Model.caddress)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(Model => Model.country)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.TextBoxFor(Model => Model.country, new { @placeholder = "enter user country name ", @class = "form-control" })
+                        @Html.ValidationMessageFor(Model => Model.country)
+                    </div>
+
+
+
+                    <input type="submit" value="Sign up" class="btn btn-info pull-right" />
+                }
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+
+<hr />
+
+<hr />
+<!-- Footer -->
+<section id="footer" style="margin-top:50%">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-md-8">
+                    <h3>e-Store</h3>
+                    <p>e-shopping allows consumers to directly buy goods or services from a seller over the Internet using a web browser.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <p>
+                        Phone:
+                        <h5>+923026547012</h5>
+                    </p>
+                    <p>
+                        e-mail:
+                        <h5>BITF12M031@pucit.edu.pk</h5>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="footer-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-7 col-xs-6">
+                <p color="white"><h4>Designed by Muhammad Saeed </h4></p>
+            </div>
+            <div class="col-md-3 col-sm-5 col-xs-6"> <a class="icon" href="#"><img src="~/images/rss.png" /></a> <a class="icon" href="#"><img src="~/images/twetter.png" /></a> <a class="icon" href="#"><img src="~/images/g-plus.png" /></a> <a class="icon" href="#"><img src="~/images/facebook.png" /></a> </div>
+        </div>
+    </div>
+</section>

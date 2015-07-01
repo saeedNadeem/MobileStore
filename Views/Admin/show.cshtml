@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "show";
+}
+
+<h2>show</h2>
+<table>
+    @foreach (var q in Model)
+    {
+
+        <tr>
+          <td>@q.cname</td>
+             <td>@q.Lname</td>
+             <td>@q.cemail</td>
+            <td>@q.cpassword</td>   
+            <td>@q.caddress</td> 
+            <td>@q.country</td>
+            
+              <td> <a href="/Admin/DeleteUser/@q.Id"> Delete</a> </td> 
+        </tr>
+
+        
+    }
+</table>

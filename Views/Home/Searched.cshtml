@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Searched";
+}
+
+<h2>Searched</h2>
+@foreach(var x in Model)
+{
+    <p>@x.Category</p>
+    <p>@x.Price</p>
+    <p>@x.Memoy</p>
+    <p>@x.Camera</p>
+    <p>@x.Number</p>
+    <img src="~/images/@x.ImageUrl" class="img-thumbnail" alt="Mehtab Rehman" style="width:300px; height:300px">
+    <br/>
+
+    @*<p><b>Category : </b> @x.Category </p>
+    <p><b>Price : </b> @x.Price </p>
+    <p><b>Memory : </b> @x.Memoy </p>
+    <p><b>Camera : </b> @x.Camera </p>
+    <p><b>Number : </b> @x.Number </p>
+    <p><b>Image : </b> <img src="~/images/@x.ImageUrl" class="thumbail" style="width:200px;height:200px" > </p>*@
+}

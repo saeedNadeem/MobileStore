@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<MvcApplication8.Models.Item>
+
+<div id="home">
+    <label for="sel1">Filter:</label>
+    <select class="form-control" id="sel1" onchange="fun()">
+        <option value="">--Select--</option>
+        <option value="Apple">Apple</option>
+        <option value="Samsung">Samsung</option>
+        <option value="Nokia">Nokia</option>
+        <option value="QMobile">QMobile</option>
+
+    </select>
+    <br />
+    <form action="/Admin/Show" method="post">
+        <input type="submit" value="see user" id="user">
+    </form>
+
+    <div id="change">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Item Id</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Detail | Update | Delete </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <td><img src="~/images/@x.ImageUrl" class="img-thumbnail" style="height:150px; width:150px" alt="MyPic" /></td>
+                        <td>@x.Id</td>
+                        <td>@x.Category</td>
+                        <td>@x.Price</td>
+                        
+                        <td>
+                            <a href="~/Admin/Detail/@x.Id">Detail</a> |
+                            <a href="~/Admin/Update/@x.Id">Update</a> |
+                            <a href="~/Admin/Del/@x.Id">Delete</a>
+                                @*@Html.ActionLink("Detail", "#") |
+                                @Html.ActionLink("Update", "#") |
+                                @Html.ActionLink("Delete", "#")*@
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        function fun() {
+            var c = $("#sel1").val();
+            alert(c);
+        }
+    });
+
+    function fun() 
+        var url = $("#sel1").value;
+        $("body").load("/Admin/GetItems?catag=apple");
+        alert("" + url);
+    }
+</script>
+
+
+

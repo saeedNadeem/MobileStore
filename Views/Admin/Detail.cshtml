@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Detail";
+}
+<h2>Detail</h2>
+
+    @foreach (var x in Model)
+{
+    <table class="table table-striped" @*class="table table-hover"*@>
+        <tbody>
+            <tr>
+                <td>Id</td>
+                <td>@x.Id</td>
+            </tr>
+            <tr>
+                <td>Category</td>
+                <td>@x.Category</td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td>@x.Price</td>
+            </tr>
+            <tr>
+                <td>Memoy</td>
+                <td>@x.Memory</td>
+            </tr>
+            <tr>
+                <td>Camera</td>
+                <td>@x.Camera</td>
+            </tr>
+            <tr>
+                <td>Number</td>
+                <td>@x.Number</td>
+            </tr>
+            <tr>
+                <td>ImageUrl</td>
+                <td>@x.ImageUrl</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    <a href="~/Admin/Dashboard" class="btn btn-default" role="button">Go Back</a>
+}

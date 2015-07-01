@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include bootstrap CSS -->
+    <!-- Include bootstrap CSS -->
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/reset.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/css/responsive.css" rel="stylesheet">
+    <title>EStore</title>
+
+<body id="about-us">
+    
+    <!--Login Start-->
+    <link href="css/login.css" rel="stylesheet">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-md-offset-4">
+                <h1 class="text-center login-title">Sign in As Admin</h1>
+                <div class="account-wall">
+                    <img class="profile-img" style="margin-left:16%" src="~/images/login.png"
+                         alt="">
+                    <form class="form-signin" action="/Admin/Login" method="post">
+                        <input type="text" name="username" class="form-control" placeholder="Email" required autofocus>
+                        <input type="password" name="pass" class="form-control" placeholder="Password" required>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">
+                            Sign in
+                        </button>
+                        <label class="checkbox pull-left">
+                            <input type="checkbox" value="remember-me">
+                            Remember me
+                        </label>
+                        <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+                    </form>
+                </div>
+                <a href="#" class="text-center new-account">Create an account </a>
+            </div>
+        </div>
+    </div>
+    <!--Login End-->
+
+
+
+    <hr><hr><hr>
+
+
+    <section id="sec-client">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="thumbnail sec-client">
+
+
+                        <p class="text">Our Happy Clients</p>
+
+                        <img class="line" src="~/images/line.png" alt="line" />
+
+
+                        <a class="move" href="#"><img src="~/images/left-move.png" /></a>
+                        <a class="move" href="#"><img src="~/images/right-move.png" /></a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Main Contents Ends -->
+
+
+
+
+
+
+</body>
+
+
+
+<script src="~/js/bootstrap.min.js"></script>

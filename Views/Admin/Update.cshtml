@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update Item</h2>
+<hr />
+@foreach (var x in Model)
+{
+    <form action="~/Admin/SaveUpdate/@x.Id" method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label for="Price">Price</label>
+            <input type="number" class="form-control" value="@x.Price" id="Price" name="Price" required="required">
+        </div>
+
+        <div class="form-group">
+            <label for="Memoy">Memoy</label>
+            <input type="text" class="form-control" value="@x.Memoy" id="Memoy" name="Memoy" required="required">
+        </div>
+
+        <div class="form-group">
+            <label for="Camera">Camera</label>
+            <input type="text" class="form-control" value="@x.Camera" id="Camera" name="Camera" required="required">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Update item</button>
+        <a href="~/Admin" class="btn btn-default" role="button">Canecl</a>
+    </form>
+}
+
+
